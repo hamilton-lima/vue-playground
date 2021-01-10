@@ -1,4 +1,5 @@
 export default {
+    name: 'session-input',
     template: `
     <div>
         <input type="text" v-model="comments"></input>
