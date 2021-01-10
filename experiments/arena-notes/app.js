@@ -14,5 +14,5 @@ var settings = {
 };
 
 const app = createApp(settings);
+app.component('session-input', sessionInput)
 app.mount("#app");
-console.log("app", app);

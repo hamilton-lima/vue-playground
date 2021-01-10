@@ -1,20 +1,19 @@
 const sessionInput = {
-    name: 'session-input',
-    props: ['comments'],
-    template: `
+  props: {
+    comments: String,
+  },
+  template: `
     <div>
-        <input type="text" v-model="comments"></input>
-        <button type="button" @click="save()"></button>
+        <input type="text" v-model="comments"/>
+        <button type="button" @click="save()">Save</button>
     </div>
     `,
-    data: {
-        comments: ""
-    }, 
-    methods :{
-        save(){
-            this.$emit('save', comments);
-        }
-    }
+  methods: {
+    save() {
+      console.log("before emit", this.comments);
+      this.$emit("save", this.comments);
+    },
+  },
 };
 
 export { sessionInput };
