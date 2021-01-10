@@ -1,5 +1,6 @@
-export default {
+const sessionInput = {
     name: 'session-input',
+    props: ['comments'],
     template: `
     <div>
         <input type="text" v-model="comments"></input>
@@ -15,3 +16,5 @@ export default {
         }
     }
 };
+
+export { sessionInput };
