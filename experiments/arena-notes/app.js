@@ -5,12 +5,9 @@ var settings = {
   components: [sessionInput],
   methods: {
     newSession(data) {
-      console.log("data", data);
+      console.log("new session getting event", data);
     },
   },
-  template: `
-    <session-input @save="newSession"></session-input>
-  `,
 };
 
 const app = createApp(settings);
