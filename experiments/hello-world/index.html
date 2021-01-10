@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script src="../scripts/vue.js"></script>
+  </head>
+  <body>
+    <h3>Hello vue, for real, hello!</h3>
+    <hr />
+    <div id="app">something was here.</div>
+
+    <script>
+      const { createApp, ref } = Vue;
+
+      const App = {
+        setup() {
+          const name = ref("Me, Myself and I");
+          return { name };
+        },
+        template: `<span>Hello {{ name }}</span>`,
+      };
+
+      createApp(App).mount("#app");
+    </script>
+  </body>
+</html>
